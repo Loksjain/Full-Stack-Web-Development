@@ -1,0 +1,129 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login container for vertical centering */
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Login card with fixed width and proper box model */
+.login-card {
+    width: 350px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+/* Login heading */
+.login-card h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Form styling */
+.login-form {
+    width: 100%;
+}
+
+/* Form group for spacing */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Input field styling */
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Submit button styling */
+.submit-btn {
+    width: 100%;
+    padding: 14px 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .login-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 10px;
+    }
+    
+    .login-container {
+        padding: 10px;
+    }
+    
+    .login-card h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .form-group input,
+    .submit-btn {
+        padding: 12px 14px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+} 
