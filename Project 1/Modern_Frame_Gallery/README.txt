@@ -3,7 +3,7 @@ THE MODERN FRAME GALLERY WEBSITE
 
 Student Name: Lokesh Jain
 Project: Static Art Gallery Website
-Date: 202
+Date: 2025
 
 IMPLEMENTED FEATURES
 ===================
