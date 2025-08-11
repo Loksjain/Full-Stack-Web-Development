@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Flip Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive 3D Flip Card</h1>
+        
+        <!-- Flip Card Container -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                
+                <!-- Front Face -->
+                <article class="flip-card-front">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=300&fit=crop&crop=center" alt="Web Development" />
+                    </div>
+                    <div class="card-content">
+                        <h3>Web Development</h3>
+                        <p class="tagline">Creating amazing digital experiences</p>
+                    </div>
+                </article>
+                
+                <!-- Back Face -->
+                <article class="flip-card-back">
+                    <div class="card-content">
+                        <h3>Skills & Expertise</h3>
+                        <p class="description">
+                            Specialized in modern web technologies including HTML5, CSS3, JavaScript, 
+                            and responsive design. Passionate about creating user-friendly interfaces 
+                            and seamless user experiences.
+                        </p>
+                        <div class="skills-list">
+                            <span class="skill">HTML5</span>
+                            <span class="skill">CSS3</span>
+                            <span class="skill">JavaScript</span>
+                            <span class="skill">Responsive Design</span>
+                        </div>
+                        <button class="cta-button">Learn More</button>
+                    </div>
+                </article>
+                
+            </div>
+        </div>
+        
+        <p class="instruction">Hover over the card to see the flip effect!</p>
+    </div>
+</body>
+</html>
+
