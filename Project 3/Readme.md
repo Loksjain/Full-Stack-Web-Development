@@ -1,4 +1,4 @@
-## Todo List
+###Readme 
 
 ### Phase 1: Plan website structure and design
 - [x] Define the content for each section (#home, #about, #services, #portfolio, #contact).
