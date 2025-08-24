@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Breaker - The Array Heist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <header class="game-header">
+            <h1 class="game-title">🔓 CODE BREAKER</h1>
+            <p class="game-subtitle">The Array Heist</p>
+            <div class="hacker-status">
+                <span class="status-text">HACKER IN TRAINING</span>
+                <div class="status-bar">
+                    <div class="status-fill"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Game Info Panel -->
+        <div class="info-panel">
+            <div class="mission-brief">
+                <h3>🎯 MISSION BRIEF</h3>
+                <p>Manipulate the digital array to find the secret pattern and crack the vault!</p>
+            </div>
+            <div class="game-stats">
+                <div class="stat-item">
+                    <span class="stat-label">TIME:</span>
+                    <span class="timer" id="timer">60</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">LEVEL:</span>
+                    <span id="current-level">1</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">TARGET:</span>
+                    <span id="target-pattern">[?, ?, ?]</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Array Display -->
+        <div class="array-container">
+            <h3 class="section-title">🔢 DIGITAL ARRAY</h3>
+            <div class="array-display" id="array-display">
+                <!-- Array cells will be generated dynamically -->
+            </div>
+            <div class="array-indices">
+                <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span>
+                <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+            </div>
+        </div>
+
+        <!-- Operations Panel -->
+        <div class="operations-panel">
+            <h3 class="section-title">⚡ OPERATIONS</h3>
+            
+            <div class="operation-group">
+                <div class="operation-card">
+                    <h4>📥 INSERT</h4>
+                    <div class="input-group">
+                        <label>Index:</label>
+                        <input type="number" id="insert-index" min="0" max="9" placeholder="0-9">
+                    </div>
+                    <div class="input-group">
+                        <label>Value:</label>
+                        <input type="number" id="insert-value" min="0" max="9" placeholder="0-9">
+                    </div>
+                    <button class="operation-btn insert-btn" onclick="insertElement()">INSERT</button>
+                </div>
+
+                <div class="operation-card">
+                    <h4>🗑️ DELETE</h4>
+                    <div class="input-group">
+                        <label>Index:</label>
+                        <input type="number" id="delete-index" min="0" max="9" placeholder="0-9">
+                    </div>
+                    <button class="operation-btn delete-btn" onclick="deleteElement()">DELETE</button>
+                </div>
+
+                <div class="operation-card">
+                    <h4>🔍 SEARCH</h4>
+                    <div class="input-group">
+                        <label>Pattern:</label>
+                        <input type="text" id="search-pattern" placeholder="e.g., 2,1,4">
+                    </div>
+                    <button class="operation-btn search-btn" onclick="searchPattern()">SEARCH</button>
+                </div>
+
+                <div class="operation-card">
+                    <h4>🔄 RESET</h4>
+                    <button class="operation-btn reset-btn" onclick="resetArray()">RESET</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Panel -->
+        <div class="feedback-panel">
+            <div class="feedback-display" id="feedback-display">
+                <p class="feedback-message">🚀 Ready to hack! Insert digits to build your code...</p>
+            </div>
+        </div>
+
+        <!-- Level Complete Modal -->
+        <div class="modal" id="success-modal">
+            <div class="modal-content">
+                <h2>🎉 LEVEL COMPLETE!</h2>
+                <p id="success-message">You cracked the code!</p>
+                <div class="modal-buttons">
+                    <button class="modal-btn" onclick="nextLevel()">NEXT LEVEL</button>
+                    <button class="modal-btn secondary" onclick="closeModal()">CONTINUE</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div class="modal" id="gameover-modal">
+            <div class="modal-content">
+                <h2>⏰ TIME'S UP!</h2>
+                <p>The vault remains locked... Try again!</p>
+                <div class="modal-buttons">
+                    <button class="modal-btn" onclick="restartGame()">TRY AGAIN</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sound Toggle -->
+        <div class="sound-toggle">
+            <button id="sound-btn" onclick="toggleSound()">🔊</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
